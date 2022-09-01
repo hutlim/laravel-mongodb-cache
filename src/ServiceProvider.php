@@ -19,9 +19,9 @@ class ServiceProvider extends ParentServiceProvider
      */
     public function boot()
     {
-        if (config('cache.default') !== 'mongodb') {
+        /*if (config('cache.default') !== 'mongodb') {
             return;
-        }
+        }*/
 
         // Extend the mongodb driver by connecting the cache repository directly
         Cache::extend('mongodb', function ($app) {
